@@ -1,4 +1,4 @@
-from Arquivo import *
+from Funcoes_do_arquivo import *
 from time import sleep
 
 arquivo = 'Senhas.txt'
@@ -15,18 +15,26 @@ print('2 - Cadastrar nova senha')
 print('3 - Sair do programa')
 
 while True:
-    print('='*50)
-    opcao = int(input('Opção: '))
+    while True:
+        try:
+            opcao = int(input('Opção: '))
+            
+            if opcao < 1 or opcao > 3:
+                print('Por favor, digite uma opção válida')
+                
+        except:
+            print('Por favor, digite uma opção válida')
+        
+        else:
+            break
     
-    if opcao < 1 or opcao > 3:
-        print('Por favor, digite uma opção válida')
-    
-    elif opcao == 1:
+    if opcao == 1:
         print('='*50)
         print('SENHAS CADASTRADAS'.center(50))
         print('='*50)
         
         mostrarArquivo(arquivo)
+        print('='*50)
     
     elif opcao == 2:
         print('='*50)
@@ -37,6 +45,7 @@ while True:
         senha = str(input('Senha: '))
         
         cadastrarSenha(arquivo, nomeDaPlataforma, senha)
+        print('='*50)
         
     elif opcao == 3:
         print('='*50)
