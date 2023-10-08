@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Samuel Campelo\Documents\GitHub\venv"
+VIRTUAL_ENV="C:\Users\Samuel Campelo\Documents\GitHub\Side-Projects\Python\Gerenciador_de_senhas\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
