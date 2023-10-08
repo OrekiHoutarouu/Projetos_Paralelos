@@ -58,7 +58,7 @@ print('='*50)
 
 while True:
     
-    print(criptografar(mensagem = str(input('Digite sua mensagem: ')).strip()))
+    print(criptografar(mensagem = str(input('Mensagem (sem acentuação): ')).strip()))
     
     sleep(1.5)
     
