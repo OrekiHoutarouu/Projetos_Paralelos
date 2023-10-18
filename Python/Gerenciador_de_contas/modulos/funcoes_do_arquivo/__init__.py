@@ -29,6 +29,7 @@ def cadastrarContas(caminho, conta):
         
     print(f'Conta de {conta["plataforma"]} cadastrada com êxito.')
 
+
 def verContasCadastradas(caminho):
     """Mostra as contas cadastradas nos arquivos .json
 
@@ -81,7 +82,7 @@ def excluirConta(caminho):
     print('-'*100)
 
     
-    for indice, conta in enumerate(os.listdir(caminho)):
+    while True:
         try:
             qualContaExcluir = int(input('Índice da conta que deseja excluir: ')) - 1 
 
@@ -90,11 +91,11 @@ def excluirConta(caminho):
             
         except ValueError:
             print('Digite uma opção válida.')
-                
+        
         else:
             for indice, conta in enumerate(os.listdir(caminho)):
                 if indice == qualContaExcluir:
-                    os.remove(os.path.join(caminho, conta))
+                    os.remove(f'{caminho}/{conta}')
                     print(f'Conta de {conta} excluída com êxito.')
                     
                     break
