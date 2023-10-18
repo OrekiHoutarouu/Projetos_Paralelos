@@ -59,7 +59,7 @@ def excluirConta(caminho):
     """Exclui alguma conta da pasta "contas"
 
     Args:
-        caminho (str): É o caminho em que a conta que será excluida, que está num arquivo .json, está armazenada
+        caminho (str): É o caminho em que a conta que será excluida se encontra
     """
     
     print(f'{"  Plataformas:":<35} {"E-mails:":<40} {"Senhas:"}')
