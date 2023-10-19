@@ -35,8 +35,7 @@ while True:
         print('CADASTRAR NOVA CONTA'.center(100))
         print('='*100)
         
-        funcoes_do_arquivo.cadastrarContas(
-            caminho,
+        funcoes_do_arquivo.cadastrarContas(caminho,
             conta = {
                 'plataforma': str(input('Plataforma: ')),
                 'email': str(input('E-mail: ')),
@@ -45,7 +44,6 @@ while True:
         )
         
         sleep(1.5)
-        print('='*100)
     
     elif opcao == 2:
         print('='*100)
@@ -53,17 +51,15 @@ while True:
         print('='*100)
         
         funcoes_do_arquivo.verContasCadastradas(caminho)
-        
-        sleep(1.5)
-        print('-'*100)
-    
+        sleep(2)
+            
     elif opcao == 3:
         print('='*100)
         print('EXCLUIR CONTA'.center(100))
         print('='*100)
         
         funcoes_do_arquivo.excluirConta(caminho)
-        sleep(1.5)
+        sleep(2)
         
     elif opcao == 4:
         print('='*100)
