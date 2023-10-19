@@ -2,7 +2,6 @@ from modulos import funcoes_do_arquivo, utilidades
 import os
 from time import sleep
 
-
 caminho = os.path.join('./', 'contas')
 funcoes_do_arquivo.criarPastaComContas(caminho)
 
