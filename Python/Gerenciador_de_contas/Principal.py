@@ -41,7 +41,6 @@ while True:
                 }
         )
         
-        
         sleep(1.5)
     
     elif opcao == 2:
