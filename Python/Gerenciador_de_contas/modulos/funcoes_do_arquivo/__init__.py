@@ -96,7 +96,7 @@ def excluirConta(caminho):
             for indice, conta in enumerate(os.listdir(caminho)):
                 if indice == qualContaExcluir:
                     os.remove(f'{caminho}/{conta}')
-                    print(f'Conta de {conta} excluída com êxito.')
+                    print(f'Conta de {conta["plataforma"]} excluída com êxito.')
                     
                     break
             break
