@@ -34,13 +34,13 @@ while True:
         print('CADASTRAR NOVA CONTA'.center(100))
         print('='*100)
         
-        funcoes_do_arquivo.cadastrarContas(caminho,
-            conta = {
+        funcoes_do_arquivo.cadastrarContas(caminho, conta = {
                 'plataforma': str(input('Plataforma: ')),
                 'email': str(input('E-mail: ')),
                 'senha': str(input('Senha: '))
-            }
+                }
         )
+        
         
         sleep(1.5)
     
