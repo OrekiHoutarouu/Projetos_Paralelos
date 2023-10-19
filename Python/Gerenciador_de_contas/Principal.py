@@ -2,19 +2,20 @@ from modulos import funcoes_do_arquivo, utilidades
 import os
 from time import sleep
 
-print('='*100)
-print('MENU PRINCIPAL'.center(100))
-print('='*100)
-
-print('1 - Cadastrar nova conta')
-print('2 - Ver contas cadastradas')
-print('3 - Deletar alguma conta')
-print('4 - Sair do programa')
 
 caminho = os.path.join('./', 'contas')
 funcoes_do_arquivo.criarPastaComContas(caminho)
 
 while True:  
+    print('='*100)
+    print('MENU PRINCIPAL'.center(100))
+    print('='*100)
+
+    print('1 - Cadastrar nova conta')
+    print('2 - Ver contas cadastradas')
+    print('3 - Deletar alguma conta')
+    print('4 - Sair do programa')
+    
     while True:
         try:
             opcao = int(input('Opção: '))
@@ -43,6 +44,7 @@ while True:
             }
         )
         
+        sleep(1.5)
         print('='*100)
     
     elif opcao == 2:
@@ -52,6 +54,7 @@ while True:
         
         funcoes_do_arquivo.verContasCadastradas(caminho)
         
+        sleep(1.5)
         print('-'*100)
     
     elif opcao == 3:
@@ -60,6 +63,7 @@ while True:
         print('='*100)
         
         funcoes_do_arquivo.excluirConta(caminho)
+        sleep(1.5)
         
     elif opcao == 4:
         print('='*100)
