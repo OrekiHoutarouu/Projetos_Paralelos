@@ -18,7 +18,13 @@ def contarArquivos(caminho):
 
 
 def analisarSenhaForte(senha):
-    caracteres = ['abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '123456789', '@#$%&.,:;></|\()[]}{?!~^`´']
+    """Analisa se a senha do usuário é forte ou não
+
+    Args:
+        senha (str): Senha que vai ser analisada pela função
+    """
+
+    caracteres = ['abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '0123456789', '@#$%&.,:;-+><_/|\()[]}{?!~^`´¨""''']
                                                                                             
 
     requisitosParaSerUmaSenhaForte = 0
@@ -106,8 +112,11 @@ def analisarSenhaForte(senha):
             print('Senha com caracteres desconhecidos ou não digitados.')
 
 
-def sugerirSenhaForte():
-    caracteres = ['abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '123456789', '@#$%&.,:;></|\()[]}{?!~^`´']
+def gerarSenhaForte():
+    """Gera senha forte totalmente aleatória para o usuário
+    """
+
+    caracteres = ['abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '0123456789', '@#$%&.,:;-+><_/|\()[]}{?!~^`´¨""''']
 
     print('Senha forte: ', end='')
 

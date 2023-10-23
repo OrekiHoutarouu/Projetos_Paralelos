@@ -1,4 +1,3 @@
-from re import A
 from modulos import funcoes_do_arquivo, utilidades
 import os
 from time import sleep
@@ -15,7 +14,7 @@ while True:
     print('2 - Ver contas cadastradas')
     print('3 - Deletar alguma conta')
     print('4 - Analisar se sua senha é forte')
-    print('5 - Sugerir senha forte')
+    print('5 - Gerar senha forte')
     print('6 - Sair do programa')
     
     while True:
@@ -72,10 +71,10 @@ while True:
             
         case 5:
             print('='*100)
-            print('SUGERIR SENHA FORTE'.center(100))
+            print('GERAR SENHA FORTE'.center(100))
             print('='*100)
             
-            utilidades.sugerirSenhaForte()
+            utilidades.gerarSenhaForte()
             sleep(2)
 
         case 6:
