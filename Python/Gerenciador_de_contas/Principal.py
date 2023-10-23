@@ -68,6 +68,7 @@ while True:
             print('='*100)
 
             utilidades.analisarSenhaForte(str(input('Senha: ')))
+            sleep(2)
             
         case 5:
             print('='*100)
