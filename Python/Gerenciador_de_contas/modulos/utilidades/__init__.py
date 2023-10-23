@@ -27,22 +27,28 @@ def analisarSenhaForte(senha):
             if caractereDaSenha in caractere:
                 requisitosParaSerUmaSenhaForte += 1
                 break
-        
+        break
+
+    for caractereDaSenha in senha:
         for caractere in caracteres[1]:
             if caractereDaSenha in caractere:
                 requisitosParaSerUmaSenhaForte += 1
                 break
-        
+        break
+
+    for caractereDaSenha in senha:
         for caractere in caracteres[2]:
             if caractereDaSenha in caractere:
                 requisitosParaSerUmaSenhaForte += 1
                 break
-        
+        break
+    
+    for caractereDaSenha in senha:
         for caractere in caracteres[3]:
             if caractereDaSenha in caractere:
                 requisitosParaSerUmaSenhaForte += 1
                 break
-            
+        break
 
     match requisitosParaSerUmaSenhaForte:
         case 1:
