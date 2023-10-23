@@ -1,6 +1,5 @@
 from os import listdir
-from random import shuffle
-import re
+from random import choice
 
 def contarArquivos(caminho):
     """Conta quantos arquivos .json estão presentes na pasta "contas"
@@ -65,16 +64,16 @@ def analisarSenhaForte(senha):
 
 
 def sugerirSenhaForte():
-    caracteres = ['abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '123456789', '@#$%&.,:;></\?!']
+    letrasMinusculas = 'abcdefghijklmnopqrstuvwxyz'
+    letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    numeros = '123456789'
+    caracteresEspeciais = '@#$%&.,:;></\?!´`^~[]}{'
 
+    conjuntoDeCaracteres = letrasMinusculas + letrasMaiusculas + numeros + caracteresEspeciais
+    senhaForte = ''
+    
     print('Senha forte: ', end='')
+    for caractere in range(11):
+        senhaForte += choice(conjuntoDeCaracteres)
 
-    for caractere in caracteres:
-        caractere = list(caractere.strip())
-
-        shuffle(caractere)
-
-        resultado = ''.join(caractere)
-        print(resultado[:3], end='')
-
-    print()
+    print(senhaForte)
