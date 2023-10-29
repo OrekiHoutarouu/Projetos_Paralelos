@@ -1,6 +1,7 @@
 from os import listdir
 from random import shuffle
 
+
 def contarArquivos(caminho):
     """Conta quantos arquivos .json estão presentes na pasta "contas"
 
