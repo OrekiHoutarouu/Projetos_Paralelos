@@ -14,7 +14,7 @@ while True:
         try:
             opcao = int(input('Opção: '))
 
-            if opcao < 1 or opcao > 2:
+            if opcao < 1 or opcao > 3:
                 raise ValueError
             
             else:
@@ -57,12 +57,12 @@ while True:
                 sleep(1.5)
             
             else:
-                mensagem = str(input('Mensagem (com 8 caracteres cada valor e sem espaços): '))
+                mensagem = str(input('Mensagem (com 8 bits cada caractere.): '))
                 utilidades.validarCodigoBinario(mensagem)
 
                 print(descriptografar.descriptografarBinario(mensagem))
                 sleep(1.5)
-                
+
         case 3:
             print('='*50)
             print('FINALIZANDO PROGRAMA'.center(50))

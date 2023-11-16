@@ -57,5 +57,3 @@ def criptografarBinario(mensagem):
         criptografada.append(f'{ord(caractere):08b}')
     
     return f"Criptografada: {' '.join(criptografada)}"
-
-    

@@ -21,4 +21,4 @@ def validarCodigoBinario(mensagem):
 
         elif int(caractere) < 0 or int(caractere) > 1:
             print('Digite um código binário válido.')
-            mensagem = int(input('Mensagem (com 8 caracteres cada valor e sem espaços.): '))
+            mensagem = int(input('Mensagem (com 8 bits cada caractere.): '))
