@@ -22,13 +22,13 @@ while True:
             opcao = int(input('Opção: '))
             
             if opcao > 6 or opcao < 1:
-                print('Digite uma opção válida.')
+                raise ValueError
                 
             else:
                 break
             
         except ValueError:
-            print('Digite uma opção válida')
+            print('Digite uma opção válida.')
                 
     match opcao:
         case 1:
