@@ -1,12 +1,12 @@
 def criptografarZenitPolar(mensagem):
-    """Criptografa mensagens para o sistema ZENIT POLAR, um sistema simples de criptografia que substitui as letras no nome ZENIT POLAR. 
+    """Criptografa mensagens para ZENIT POLAR (sistema simples de criptografia que substitui as letras no nome ZENIT POLAR). 
         Não reconhece acentuação, porém reconhece símbolos e emojis.
 
     Args:
-        mensagem (string): É a mensagem, que pode ser digitada em qualquer língua, que será criptografada em ZENIT POLAR. 
+        mensagem (string): É a mensagem, que pode ser digitada em qualquer língua, que será criptografada para ZENIT POLAR. 
 
     Returns:
-        string: É a mensagem digitada já criptografada em ZENIT POLAR.
+        list: É a mensagem digitada já criptografada para ZENIT POLAR.
     """
     
     criptografada = []
@@ -60,15 +60,16 @@ def criptografarZenitPolar(mensagem):
 
 
 def criptografarBinario(mensagem):
-    """Criptografa mensagens para código binário, sistema de numeração que utiliza a base 2. 
+    """Criptografa mensagens para código binário (sistema de numeração que utiliza a base 2). 
         Utiliza o Unicode para reconhecer todos os caracteres, incluindo caracteres acentuados, símbolos e emojis.
 
     Args:
         mensagem (string): É a mensagem, que pode ser digitada em qualquer língua, que será criptografada para código binário. 
 
     Returns:
-        : _description_
+        list: É a mensagem digitada já criptografada para código binário.
     """
+
     criptografada = []
 
     for caractere in mensagem:
