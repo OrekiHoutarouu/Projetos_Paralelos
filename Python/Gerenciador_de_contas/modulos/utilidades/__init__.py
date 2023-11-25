@@ -22,12 +22,9 @@ def analisarSenhaForte(senha):
 
     Args:
         senha (str): Senha que vai ser analisada pela função
-    """
+    """                                                                                          
 
-    caracteres = ['abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '0123456789', '@#$%&.,:;-+><_/|\()[]}{?!~^`´¨""''']
-                                                                                            
-
-    requisitosParaSerUmaSenhaForte = 0
+    requisitosSenhaForte = 0
     contemLetraMinuscula = False
     contemLetraMaiuscula = False
     contemNumero = False
@@ -36,77 +33,73 @@ def analisarSenhaForte(senha):
     for caractereDaSenha in senha:
 
         if contemLetraMinuscula == False:
-            for caractere in caracteres[0]:
-                if caractereDaSenha in caractere:
-                    requisitosParaSerUmaSenhaForte += 1
-                    contemLetraMinuscula = True
+            if caractereDaSenha.islower():
+                contemLetraMinuscula = True
+                requisitosSenhaForte += 1
 
         if contemLetraMaiuscula == False:
-            for caractere in caracteres[1]:
-                if caractereDaSenha in caractere:
-                    requisitosParaSerUmaSenhaForte += 1
-                    contemLetraMaiuscula = True
+            if caractereDaSenha.isupper():
+                contemLetraMaiuscula = True
+                requisitosSenhaForte += 1
 
         if contemNumero == False:
-            for caractere in caracteres[2]:
-                if caractereDaSenha in caractere:
-                    requisitosParaSerUmaSenhaForte += 1
-                    contemNumero = True
+            if caractereDaSenha.isnumeric():
+                contemNumero = True
+                requisitosSenhaForte += 1
                     
         if contemCaractereEspecial == False:
-            for caractere in caracteres[3]:
-                if caractereDaSenha in caractere:
-                    requisitosParaSerUmaSenhaForte += 1
-                    contemCaractereEspecial = True
+            if not caractereDaSenha.isalnum():
+                contemCaractereEspecial = True
+                requisitosSenhaForte += 1
 
     if len(senha) >= 8:
-        requisitosParaSerUmaSenhaForte += 1
-        print('Sua senha contém 8 ou mais caracteres.')
+        requisitosSenhaForte += 1
+        print('\033[0;32mSua senha contém 8 ou mais caracteres.\033[m')
     
     else:
-        print('Sua senha contém menos de 8 caracteres.')
+        print('\033[0;31mSua senha não contém 8 ou mais caracteres.\033[m')
 
     if contemLetraMinuscula == True:
-        print('Sua senha contém letra(s) minuscula(s).')
+        print('\033[0;32mSua senha contém letra(s) minuscula(s).\033[m')
     
     else:
-        print('Sua senha não contém letra(s) minuscula(s).')
+        print('\033[0;31mSua senha não contém letra(s) minuscula(s).\033[m')
         
     if contemLetraMaiuscula == True:
-        print('Sua senha contém letra(s) maiúscula(s).')
+        print('\033[0;32mSua senha contém letra(s) maiúscula(s).\033[m')
 
     else:
-        print('Sua senha não contém letra(s) maiúscula(s)')
+        print('\033[0;31mSua senha não contém letra(s) maiúscula(s)\033[m')
         
     if contemNumero == True:
-        print('Sua senha contém número(s)')
+        print('\033[0;32mSua senha contém número(s)\033[m')
     
     else:
-        print('Sua senha não contém número(s)')
-        
+        print('\033[0;31mSua senha não contém número(s)\033[m')
+
     if contemCaractereEspecial == True:
-        print('Sua senha contém caractere(s) especial(is).')
+        print('\033[0;32mSua senha contém caractere(s) especial(is).\033[m')
     
     else:
-        print('Sua senha não contém caractere(s) especial(is).')
+        print('\033[0;31mSua senha não contém caractere(s) especial(is).\033[m')
 
-    print(f'Sendo assim, sua senha atinge {requisitosParaSerUmaSenhaForte} dos 5 requisitos para ser uma senha forte, portanto:')
+    print(f'Sendo assim, sua senha atinge {requisitosSenhaForte} dos 5 requisitos para ser uma senha forte, portanto: ', end='')
 
-    match requisitosParaSerUmaSenhaForte:
+    match requisitosSenhaForte:
         case 1:
-            print('Sua senha é fraca.')
+            print('\033[0;31mSua senha é fraca.\033[m')
         
         case 2:
-            print('Sua senha está entre média e fraca.')
+            print('\033[0;31mSua senha está entre média e fraca.\033[m')
 
         case 3:
-            print('Sua senha é média.')
+            print('\033[0;33mSua senha é média.\033[m')
         
         case 4:
-            print('Sua senha está entre média e forte.')
+            print('\033[0;33mSua senha está entre média e forte.\033[m')
 
         case 5:
-            print('Sua senha é forte')
+            print('\033[0;32mSua senha é forte.\033[m')
 
         case _:
             print('Senha com caracteres desconhecidos ou não digitados.')
@@ -134,4 +127,4 @@ def gerarSenhaForte():
 
     print(''.join(resultado))
 
-    print('\nContém 12 caracteres, duplamente e aleatoriamente sorteados, sendo eles:\n 3 letras minúsculas\n 3 letras maiúsculas\n 3 números inteiros\n 3 caracteres especiais.')
+    print('\nContém 12 caracteres, duplamente e aleatoriamente sorteados, sendo eles:\033[0;32m\n 3 letras minúsculas\n 3 letras maiúsculas\n 3 números inteiros\n 3 caracteres especiais.\033[m')

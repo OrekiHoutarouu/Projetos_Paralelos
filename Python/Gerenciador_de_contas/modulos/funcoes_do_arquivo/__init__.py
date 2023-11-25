@@ -27,7 +27,7 @@ def cadastrarContas(caminho, conta):
     with open(f'{caminho}/{conta["plataforma"]}.json', 'w+', encoding = 'utf-8') as file:
         json.dump(conta, file, indent = 4)
         
-    print(f'Conta de {conta["plataforma"]} cadastrada com êxito.')
+    print(f'\033[0;32mConta de {conta["plataforma"]} cadastrada com êxito.\033[m')
 
 
 def verContasCadastradas(caminho):
@@ -43,7 +43,7 @@ def verContasCadastradas(caminho):
     numeroDeArquivos = utilidades.contarArquivos(caminho)
     
     if numeroDeArquivos == -1:
-        print('Para excluir visualizar ou excluir alguma conta é necessário primeiro cadastrar uma conta (Opção 1).')
+        print('\033[0;31mPara excluir visualizar ou excluir alguma conta é necessário primeiro cadastrar uma conta (Opção 1).\033[m')
         
     else:
         for indice, conta in enumerate(os.listdir(caminho)):  
@@ -77,14 +77,14 @@ def excluirConta(caminho):
                     raise ValueError
                 
             except ValueError:
-                print('Digite uma opção válida.')
+                print('\033[0;31mDigite uma opção válida.\033[m')
             
             else:
                 for indice, conta in enumerate(os.listdir(caminho)):
                     if indice == qualContaExcluir:
                         os.remove(f'{caminho}/{conta}')
                         
-                        print(f'Conta de {conta[:-5]} excluída com êxito.')
+                        print(f'\033[0;32mConta de {conta[:-5]} excluída com êxito.\033[m')
                         
                         break
                 break
