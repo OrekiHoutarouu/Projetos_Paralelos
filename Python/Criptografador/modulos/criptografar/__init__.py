@@ -3,10 +3,10 @@ def criptografarZenitPolar(mensagem):
         Não reconhece acentuação, porém reconhece símbolos e emojis.
 
     Args:
-        mensagem (string): É a mensagem, que pode ser digitada em qualquer língua, que será criptografada para ZENIT POLAR. 
+        mensagem (string): É o texto claro, que pode ser digitado em qualquer língua, que será criptografado para ZENIT POLAR. 
 
     Returns:
-        list: É a mensagem digitada já criptografada para ZENIT POLAR.
+        list: É o texto claro digitado já criptografado para ZENIT POLAR.
     """
     
     criptografada = []
@@ -64,10 +64,10 @@ def criptografarBinario(mensagem):
         Utiliza o Unicode para reconhecer todos os caracteres, incluindo caracteres acentuados, símbolos e emojis.
 
     Args:
-        mensagem (string): É a mensagem, que pode ser digitada em qualquer língua, que será criptografada para código binário. 
+        mensagem (string): É o texto claro, que pode ser digitado em qualquer língua, que será criptografado para código binário. 
 
     Returns:
-        list: É a mensagem digitada já criptografada para código binário.
+        list: É o texto claro digitado já criptografado para código binário.
     """
 
     criptografada = []

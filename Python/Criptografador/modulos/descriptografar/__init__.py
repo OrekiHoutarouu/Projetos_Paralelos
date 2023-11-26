@@ -1,13 +1,13 @@
 def descriptografarZenitPolar(mensagem):
     """Descriptografa mensagens escritas em ZENIT POLAR (sistema simples de criptografia que substitui as letras no nome ZENIT POLAR) 
-        para a mensagem na língua real. 
+        para a mensagem no texto claro. 
         Não reconhece acentuação, porém reconhece símbolos e emojis.
 
     Args:
-        mensagem (string): É a mensagem, em ZENIT POLAR, que será descriptografada para a mensagem na língua real. 
+        mensagem (string): É o texto cifrado, em ZENIT POLAR, que será descriptografado para a mensagem no texto claro. 
 
     Returns:
-        list: É a mensagem digitada já descriptografada para a língua real.
+        list: É o texto cifrado já descriptografado para o texto claro.
     """
     
     descriptografada = []
@@ -65,10 +65,10 @@ def descriptografarBinario(mensagem):
         Utiliza o Unicode para reconhecer todos os caracteres, incluindo caracteres acentuados, símbolos e emojis.
 
     Args:
-        mensagem (string): É a mensagem, em código binário, que será descriptografada para a mensagem na língua real. 
+        mensagem (string): É o texto cifrado, em código binário, que será descriptografado para o texto claro. 
 
     Returns:
-        list: É a mensagem digitada já descriptografada para a língua real.
+        list: É o texto cifrado já descriptografado para o texto claro.
     """
 
     descriptografada = []
