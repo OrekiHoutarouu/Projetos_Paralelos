@@ -3,10 +3,10 @@ import json
 from modulos import utilidades
 
 def criarPastaComContas(caminho):
-    """Cria uma pasta que vai armazenar arquivos .json com as contas cadastradas
+    """Cria uma pasta que vai armazenar arquivos .json com as contas cadastradas.
 
     Args:
-        caminho (str): É o caminho em que a pasta será criada
+        caminho (str): É o caminho em que a pasta será criada.
     """
     
     try:
@@ -17,11 +17,11 @@ def criarPastaComContas(caminho):
     
     
 def cadastrarContas(caminho, conta):
-    """Cadastra uma conta com os dados passados no dicionário "conta" num arquivo .json
+    """Cadastra uma conta com os dados passados no dicionário "conta" num arquivo .json.
 
     Args:
         caminho (str): É o caminho em que o arquivo .json com os dados da conta será armazenado
-        conta (dict): São os dados da conta que vai ser cadastrada no arquivo .json
+        conta (dict): São os dados da conta que vai ser cadastrada no arquivo .json.
     """
     
     with open(f'{caminho}/{conta["plataforma"]}.json', 'w+', encoding = 'utf-8') as file:
@@ -31,10 +31,10 @@ def cadastrarContas(caminho, conta):
 
 
 def verContasCadastradas(caminho):
-    """Mostra as contas cadastradas nos arquivos .json
+    """Mostra as contas cadastradas nos arquivos .json.
 
     Args:
-        caminho (str): É o caminho em que as contas a serem mostradas se encontram
+        caminho (str): É o caminho em que as contas a serem mostradas se encontram.
     """
     
     print(f'{"  Plataformas:":<35} {"E-mails:":<40} {"Senhas:"}')
@@ -59,10 +59,10 @@ def verContasCadastradas(caminho):
             
             
 def excluirConta(caminho):
-    """Exclui alguma conta da pasta "contas"
+    """Exclui alguma conta da pasta "contas".
 
     Args:
-        caminho (str): É o caminho em que a conta que será excluida se encontra
+        caminho (str): É o caminho em que a conta que será excluida se encontra.
     """
     
     numeroDeArquivos = utilidades.contarArquivos(caminho)

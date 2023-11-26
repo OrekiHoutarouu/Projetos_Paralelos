@@ -3,10 +3,13 @@ from random import shuffle
 
 
 def contarArquivos(caminho):
-    """Conta quantos arquivos .json estão presentes na pasta "contas"
+    """Conta quantos arquivos .json estão presentes na pasta "contas".
 
     Args:
-        caminho (str): É o caminho em que vão ser contados os arquivos .json
+        caminho (str): É o caminho em que vão ser contados os arquivos .json.
+
+    Returns:
+        int: É o número de arquivos .json presentes na pasta "contas".
     """
     
     numeroDeArquivos = -1
@@ -18,11 +21,14 @@ def contarArquivos(caminho):
 
 
 def analisarSenhaForte(senha):
-    """Analisa se a senha do usuário é forte ou não
+    """Analisa se a senha digitada pelo usuário é forte ou não.
 
     Args:
-        senha (str): Senha que vai ser analisada pela função
-    """                                                                                          
+        senha (str): Senha que vai ser analisada.
+
+    Returns:
+        int: É o número de requisitos para ser uma senha forte que a senha digitada pelo usuário alcança.
+    """
 
     requisitosSenhaForte = 0
     contemLetraMinuscula = False
@@ -87,7 +93,10 @@ def analisarSenhaForte(senha):
 
 
 def gerarSenhaForte():
-    """Gera senha forte totalmente aleatória para o usuário
+    """Gera senha forte totalmente aleatória e duplamente sorteada para o usuário.
+
+    Returns:
+        str: É a senha forte duplamente sorteada gerada. 
     """
 
     caracteres = ['abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '0123456789', '@#$%&.,:;-+><_/|\()[]}{?!~^`´¨""''']
