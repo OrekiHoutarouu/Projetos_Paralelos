@@ -83,26 +83,7 @@ def analisarSenhaForte(senha):
     else:
         print('\033[0;31mSua senha não contém caractere(s) especial(is).\033[m')
 
-    print(f'Sendo assim, sua senha atinge {requisitosSenhaForte} dos 5 requisitos para ser uma senha forte, portanto: ', end='')
-
-    match requisitosSenhaForte:
-        case 1:
-            print('\033[0;31mSua senha é fraca.\033[m')
-        
-        case 2:
-            print('\033[0;31mSua senha está entre média e fraca.\033[m')
-
-        case 3:
-            print('\033[0;33mSua senha é média.\033[m')
-        
-        case 4:
-            print('\033[0;33mSua senha está entre média e forte.\033[m')
-
-        case 5:
-            print('\033[0;32mSua senha é forte.\033[m')
-
-        case _:
-            print('Senha com caracteres desconhecidos ou não digitados.')
+    return requisitosSenhaForte
 
 
 def gerarSenhaForte():
@@ -126,5 +107,3 @@ def gerarSenhaForte():
         shuffle(resultado)
 
     return ''.join(resultado)
-
-    

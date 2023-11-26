@@ -66,7 +66,27 @@ while True:
             print('ANALISAR SE SENHA É FORTE'.center(100))
             print('='*100)
 
-            utilidades.analisarSenhaForte(str(input('Senha: ')))
+            requisitosSenhaForte = utilidades.analisarSenhaForte(str(input('Senha: ')))
+            print(f'Sendo assim, sua senha atinge {requisitosSenhaForte} dos 5 requisitos para ser uma senha forte, portanto: ', end='')
+                                                                 
+            match requisitosSenhaForte:
+                case 1:
+                    print('\033[0;31mSua senha é fraca.\033[m')
+            
+                case 2:
+                    print('\033[0;31mSua senha está entre média e fraca.\033[m')
+
+                case 3:
+                    print('\033[0;33mSua senha é média.\033[m')
+            
+                case 4:
+                    print('\033[0;33mSua senha está entre média e forte.\033[m')
+
+                case 5:
+                    print('\033[0;32mSua senha é forte.\033[m')
+
+                case _:
+                    print('Senha com caracteres desconhecidos ou não digitados.')
             sleep(2)
             
         case 5:
