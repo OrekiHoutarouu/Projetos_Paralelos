@@ -74,7 +74,8 @@ while True:
             print('GERAR SENHA FORTE'.center(100))
             print('='*100)
             
-            utilidades.gerarSenhaForte()
+            print(utilidades.gerarSenhaForte())
+            print('\nContém 12 caracteres, duplamente e aleatoriamente sorteados, sendo eles:\033[0;32m\n 3 letras minúsculas\n 3 letras maiúsculas\n 3 números inteiros\n 3 caracteres especiais.\033[m')
             sleep(2)
 
         case 6:

@@ -125,6 +125,6 @@ def gerarSenhaForte():
 
         shuffle(resultado)
 
-    print(''.join(resultado))
+    return ''.join(resultado)
 
-    print('\nContém 12 caracteres, duplamente e aleatoriamente sorteados, sendo eles:\033[0;32m\n 3 letras minúsculas\n 3 letras maiúsculas\n 3 números inteiros\n 3 caracteres especiais.\033[m')
+    
