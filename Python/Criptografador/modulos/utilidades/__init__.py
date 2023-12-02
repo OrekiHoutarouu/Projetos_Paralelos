@@ -39,7 +39,7 @@ def validarCodigoBinario(mensagem):
     
     for caractere in mensagem:
         if caractere == ' ':
-            caractere = ''
+            caractere = '0'
 
         if not caractere.isnumeric():
             print('\033[0;31mDigite um código binário válido.\033[m')
@@ -65,7 +65,7 @@ def validarHexadecimal(mensagem):
 
     for caractere in mensagem:
         if caractere == ' ':
-            caractere = ''
+            caractere = '0'
 
         if not caractere.isalnum():
             print('\033[0;31mDigite um código hexadecimal válido.\033[m')
