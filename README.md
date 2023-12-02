@@ -1,2 +1,2 @@
-# Side_Projects
-Alguns side-projects meus com as linguagens que aprendi.
+<h1>Projetos_Paralelos</h1>
+<p>Alguns dos meus pequenos projetos paralelos aos estudos para treinar e brincar com as linguagens que aprendi.</p>
