@@ -59,7 +59,9 @@ while True:
             
             else:
                 mensagem = str(input('Mensagem (com 8 bits cada caractere.): '))
-                utilidades.validarCodigoBinario(mensagem)
+
+                while utilidades.validarCodigoBinario(mensagem) == False:
+                    mensagem = str(input('Mensagem (com 8 bits cada caractere.): '))
 
                 print(descriptografar.descriptografarBinario(mensagem))
                 sleep(1.5)
@@ -79,6 +81,9 @@ while True:
 
             else:
                 mensagem = str(input('Mensagens (com 2 dígitos cada caractere.): '))
+
+                while utilidades.validarHexadecimal(mensagem) == False:
+                    mensagem = str(input('Mensagens (com 2 dígitos cada caractere.): '))
 
                 print(descriptografar.descriptografarHexadecimal(mensagem))
                 sleep(1.5)
