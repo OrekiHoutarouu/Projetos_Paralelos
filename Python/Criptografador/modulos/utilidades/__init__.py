@@ -20,7 +20,7 @@ def validarCriptografacaoOuDescriptografacao(criptografarOuDescriptografar):
                 break
         
         except ValueError:
-                print('Digite uma opção válida.')
+                print('\033[0;31mDigite uma opção válida.\033[m')
                 criptografarOuDescriptografar = int(input('Opção: '))
     
     return criptografarOuDescriptografar
@@ -41,7 +41,7 @@ def validarCodigoBinario(mensagem):
             caractere = ''
 
         elif int(caractere) < 0 or int(caractere) > 1:
-            print('Digite um código binário válido.')
+            print('\033[0;31mDigite um código binário válido.\033[m')
             mensagem = int(input('Mensagem (com 8 bits cada caractere.): '))
     
     return mensagem

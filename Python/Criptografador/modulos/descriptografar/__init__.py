@@ -94,3 +94,39 @@ def descriptografarBinario(mensagem):
         descriptografada.append(chr(int(byte)))
 
     return f"Descriptografada: {''.join(descriptografada)}"
+
+
+def descriptografarHexadecimal(mensagem):
+    """Descriptografa mensagens escritas em hexadecimal (sistema de numeração que utiliza a base 16) para seu correspondente no Unicode.
+        Utiliza o Unicode para reconhecer todos os caracteres, incluindo caracteres acentuados, símbolos e emojis.
+
+    Args:
+        mensagem (string): É o texto cifrado, em hexadecimal, que será descriptografado para o texto claro.
+
+    Returns:
+        list: É o texto cifrado já descriptografado para o texto claro.
+    """
+
+    descriptografada = []
+    bytes = []
+    byte = []
+    contador = 0
+
+    for caractere in mensagem:
+        if caractere == ' ':
+            caractere = ''
+            contador -= 1
+
+        byte.append(caractere)
+        contador += 1
+
+        if contador == 2:
+            bytes.append(''.join(byte)[:])
+            byte.clear()
+            contador = 0
+
+    for byte in bytes:
+        byte = int(byte, 16)
+        descriptografada.append(chr(int(byte)))
+
+    return f"Descriptografada: {''.join(descriptografada)}"

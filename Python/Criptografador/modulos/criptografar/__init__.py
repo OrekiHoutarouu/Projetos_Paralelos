@@ -76,3 +76,22 @@ def criptografarBinario(mensagem):
         criptografada.append(f'{ord(caractere):08b}')
     
     return f"Criptografada: {' '.join(criptografada)}"
+
+
+def criptografarHexadecimal(mensagem):
+    """Criptografa mensagens para hexadecimal (sistema de numeração que utiliza a base 16).
+        Utiliza o Unicode para reconhecer todos os caracteres, incluindo caracteres acentuados, símbolos e emojis.
+
+    Args:
+        mensagem (string): É o texto claro, que pode ser digitado em qualquer língua, que será criptografado para hexadecimal.
+
+    Returns:
+        list: É o texto claro digitado já criptografado para hexadecimal.
+    """
+
+    criptografada = []
+
+    for caractere in mensagem:
+        criptografada.append(f'{ord(caractere):02x}')
+
+    return f"Criptografada: {''.join(criptografada)}"
