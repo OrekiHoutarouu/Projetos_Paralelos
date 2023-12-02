@@ -77,7 +77,7 @@ def validarHexadecimal(mensagem):
                 return False
         
         elif caractere.isalpha():
-            if (ord(caractere) < 65 or ord(caractere) > 69) and (ord(caractere) < 97 or ord(caractere) > 101):
+            if (ord(caractere) < 65 or ord(caractere) > 70) and (ord(caractere) < 97 or ord(caractere) > 102):
                 print('\033[0;31mDigite um código hexadecimal válido.\033[m')
                 return False
     
