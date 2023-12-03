@@ -100,8 +100,6 @@ def gerarSenhaForte():
     """
 
     caracteres = ['abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '0123456789', '@#$%&.,:;-+><_/|\()[]}{?!~^`´¨""''']
-
-    print('Senha forte: ', end='')
     resultado = []
 
     for caractere in caracteres:
@@ -115,4 +113,4 @@ def gerarSenhaForte():
 
         shuffle(resultado)
 
-    return ''.join(resultado)
+    return f"Senha forte: {''.join(resultado)}"

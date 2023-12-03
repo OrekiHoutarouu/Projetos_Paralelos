@@ -37,7 +37,7 @@ def verContasCadastradas(caminho):
         caminho (str): É o caminho em que as contas a serem mostradas se encontram.
     """
     
-    print(f'{"  Plataformas:":<35} {"E-mails:":<40} {"Senhas:"}')
+    print(f'{"ID | Plataformas:":<35} {"E-mails:":<40} {"Senhas:"}')
     print('-'*100)
     
     numeroDeArquivos = utilidades.contarArquivos(caminho)
@@ -50,8 +50,8 @@ def verContasCadastradas(caminho):
             with open(f'{caminho}/{conta}', 'r', encoding = 'utf-8') as file:
                 informacao = json.load(file) 
                     
-                print(f'{indice + 1} ', end='')
-                print(f'{informacao["plataforma"]:<34}', end='')
+                print(f'{indice + 1}  |', end='')
+                print(f' {informacao["plataforma"]:<31}', end='')
                 print(f'{informacao["email"]:<41}', end='')
                 print(f'{informacao["senha"]}')
                 
@@ -71,7 +71,7 @@ def excluirConta(caminho):
     if numeroDeArquivos != -1:
         while True:
             try:
-                qualContaExcluir = int(input('Índice da conta que deseja excluir: ')) - 1 
+                qualContaExcluir = int(input('ID da conta que deseja excluir: ')) - 1 
 
                 if qualContaExcluir > numeroDeArquivos or qualContaExcluir < 0:
                     raise ValueError
